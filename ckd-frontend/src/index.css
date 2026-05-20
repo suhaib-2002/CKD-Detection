@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --sidebar: #09050d;
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --success: #10b981;
+  --border: #e2e8f0;
+}
+
+@layer base {
+  * {
+    @apply border-slate-200 antialiased;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--background);
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.015em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black tracking-tight text-slate-900;
+  }
+
+  /* Global Card Style */
+  .saas-card {
+    @apply bg-white border border-slate-200/60 rounded-3xl shadow-sm transition-all;
+  }
+
+  /* Premium Input Focus */
+  .premium-focus:focus {
+    @apply outline-none ring-4 ring-indigo-50 border-indigo-500/50 bg-white;
+  }
+
+  /* Remove number spinner arrows globally */
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+  .font-inter { font-family: 'Inter', sans-serif; }
+  
+  .bg-indigo-premium { background-color: #6366f1; }
+  .text-indigo-premium { color: #6366f1; }
+  
+  .btn-primary {
+    @apply px-6 py-2.5 bg-indigo-600 text-white font-bold rounded-xl shadow-lg shadow-indigo-100 hover:bg-indigo-700 active:scale-[0.98] transition-all uppercase tracking-widest text-[11px];
+  }
+}

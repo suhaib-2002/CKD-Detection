@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+jspm_packages/
+.pnp
+.pnp.js
+
+# Build and distribution
+dist/
+build/
+out/
+.next/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.ipynb_checkpoints/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Environments
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
